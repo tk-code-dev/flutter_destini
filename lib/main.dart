@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'story_brain.dart';
 
 void main() => runApp(Destini());
@@ -30,7 +30,7 @@ class _StoryPageState extends State<StoryPage> {
           image: DecorationImage(
               image: AssetImage('images/background.png'), fit: BoxFit.cover),
         ),
-        padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
+        padding: EdgeInsets.symmetric(vertical: 55.0, horizontal: 20.0),
         constraints: BoxConstraints.expand(),
         child: SafeArea(
           child: Column(
@@ -41,9 +41,10 @@ class _StoryPageState extends State<StoryPage> {
                 child: Center(
                   child: Text(
                     storyBrain.getStory(),
-                    style: TextStyle(
-                      fontSize: 25.0,
-                    ),
+                    style: GoogleFonts.spaceMono(
+                        textStyle: TextStyle(color: Colors.white),
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700),
                   ),
                 ),
               ),
@@ -59,9 +60,9 @@ class _StoryPageState extends State<StoryPage> {
                   color: Colors.red,
                   child: Text(
                     storyBrain.getChoice1(),
-                    style: TextStyle(
-                      fontSize: 20.0,
-                    ),
+                    style: GoogleFonts.spaceMono(
+                        textStyle: TextStyle(color: Colors.white),
+                        fontWeight: FontWeight.w600),
                   ),
                 ),
               ),
@@ -83,9 +84,9 @@ class _StoryPageState extends State<StoryPage> {
                     color: Colors.blue,
                     child: Text(
                       storyBrain.getChoice2(),
-                      style: TextStyle(
-                        fontSize: 20.0,
-                      ),
+                      style: GoogleFonts.spaceMono(
+                          textStyle: TextStyle(color: Colors.white),
+                          fontWeight: FontWeight.w600),
                     ),
                   ),
                 ),
@@ -97,5 +98,3 @@ class _StoryPageState extends State<StoryPage> {
     );
   }
 }
-
-//TODO: Step 29 - Run the app and test it against the Story Outline to make sure you've completed all the steps. The code for the completed app can be found here: https://github.com/londonappbrewery/destini-challenge-completed/
